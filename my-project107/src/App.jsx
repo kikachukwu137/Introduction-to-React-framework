@@ -1,3 +1,27 @@
+import { useState } from "react";
+function App(){
+  const[input,setInput] = useState("");
+  const[name, setName] = useState("")
+  function handleClick(event){
+
+    setInput(event.target.value)
+  }
+  function handleChange(){
+    setName(input)
+
+  }
+  return(
+    <div className="Container">
+      <h1>hello {name} {input}</h1>
+      <input type="text" onChange={handleClick} value={input} placeholder="what is your name" />
+      <button onClick={handleChange}>submit</button>
+
+    </div>
+
+  )
+}
+export default App
+
 // import { useState } from "react";
 
 // function App(){
@@ -65,7 +89,7 @@
 
 
 
-
+/*
 import { useState } from "react";
 
 function App(){
@@ -137,4 +161,4 @@ export default App;
 
 
 
-
+*/
